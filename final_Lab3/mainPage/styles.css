@@ -6,8 +6,17 @@ body{
 }
 
 .header{
+    position: fixed;
     width: 100%;
     border-style: none;
+    z-index: 1;
+    position: static;
+
+}
+
+.navbar-brand img{
+    width: 100px;
+    display: 100px;
 }
 
 .footer{
@@ -17,6 +26,7 @@ body{
 }
 
 .main-container{
+    z-index: 0;
     background: white;
     margin-left: 70px;
     margin-right: 70px;
@@ -24,7 +34,7 @@ body{
 }
 
 .cards-container{
-    margin-top: 0;
+    margin-top: 10px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 250px);
     gap: 30px;
@@ -69,6 +79,11 @@ body{
 }
 
 @media (max-width: 430px){
+    .navbar-brand img{
+        width: 70px;
+        display: 70px;
+    }
+    
     .cards-container{
         grid-template-columns: repeat(auto-fill, 140px);
     }
@@ -79,4 +94,6 @@ body{
         width: 140px;
         height: 140px;
     }
+
+    
 }
