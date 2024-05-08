@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
 body{
     padding: 0;
     margin: 0;
@@ -9,73 +7,48 @@ body{
     position: fixed;
     width: 100%;
     border-style: none;
-    z-index: 1;
     position: static;
-
 }
 
 .navbar-brand img{
     width: 100px;
-    display: 100px;
-}
-
-.footer{
-    width: 100%;
-    border-style: none;
-    margin-bottom: 0;
 }
 
 .main-container{
     z-index: 0;
     background: white;
-    margin-left: 70px;
-    margin-right: 70px;
     place-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border: 0;
+    overflow: hidden;
 }
 
-.cards-container{
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 250px);
-    gap: 30px;
-    place-content: center;
+.card{
+    width: 18rem;
+    /*grid-template-columns: repeat(auto-fill);*/
 }
 
-.product-card{
-    width:240px;
+.card img{
+    width: 286px;
+    height: 286px;
 }
 
-.product-card img{
-    width:240px;
-    height: 240px;
-    border-radius: 20px;
-    object-fit: cover;
+.footer{
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    border-style: none;
+    position: static;
 }
 
-.product-info{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 5px;
-}
-
-.product-info button i{
-    font-size: 30px;
-    background: rgb(236, 235, 235);
-}
-
-
-.product-info div p:nth-child(1){
-    font-size: var(--sm);
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.product-info div p:nth-child(2){
-    font-weight: bold;
-    font-size: var(--md);
-    margin-top: 16px;
-    margin-bottom: 16px;
+.mb-2 svg{
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    margin-right: 20px;
 }
 
 @media (max-width: 430px){
@@ -84,9 +57,10 @@ body{
         display: 70px;
     }
     
-    .cards-container{
+    .cards{
         grid-template-columns: repeat(auto-fill, 140px);
     }
+
     .product-card{
         width:140px;
     }
