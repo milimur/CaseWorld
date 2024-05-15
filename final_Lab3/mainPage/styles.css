@@ -26,8 +26,14 @@ body{
     overflow: hidden;
 }
 
+.no-underline {
+    text-decoration: none;
+    color: black;
+}
+
 .card{
     width: 18rem;
+    
     /*grid-template-columns: repeat(auto-fill);*/
 }
 
