@@ -14,7 +14,7 @@ body{
     width: 100px;
 }
 
-.main-container{
+.container{
     z-index: 0;
     background: white;
     place-content: center;
@@ -33,7 +33,6 @@ body{
 
 .card{
     padding: 0;
-    
 }
 
 .card img{
@@ -61,17 +60,15 @@ body{
         width: 70px;
         display: 70px;
     }
-    
-    .cards{
-        grid-template-columns: repeat(auto-fill, 140px);
+
+    .card {
+        width: 90%; 
+        margin: 10px auto;
     }
 
-    .product-card{
-        width:140px;
-    }
-    .product-card img{
+    .card img{
         width: 140px;
-        height: 140px;
+        height: auto;
     }
 
     
