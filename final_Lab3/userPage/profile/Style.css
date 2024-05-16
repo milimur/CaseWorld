@@ -1,0 +1,165 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+.UserProfile{
+font-family: Arial, Helvetica, sans-serif;
+background: white;
+ display: flex;
+min-height: 10vh;
+}
+.all{
+    width: 70%;
+    flex-direction: column;
+    display: flex;
+}
+
+
+aside{
+    border-radius: 10%;
+    
+    box-sizing:border-box;
+    min-height:1 vh;
+    float:left;
+    background-color:linear-gradient(150deg , lightgray, white);
+    width: 30%;
+   
+}
+
+aside.car{
+    
+    background:lightgray;
+    display: flex;
+    flex-direction: column; 
+    padding: 50px;
+    text-align: center;
+    min-height:1 vh;
+
+    float:right;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-body{
+    font-weight:bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 10px ;
+    background:transparent;
+    margin-bottom: 50px;
+    font-weight:bolder;
+   
+    border-radius: 25px;
+}
+
+.listaCompras{
+    flex-direction:row;
+}
+.datostarj{
+    flex-direction:column;
+    margin-bottom: 20px;
+    color:black;
+}
+
+::placeholder{
+    color: lightslategray; 
+}
+.create{
+    background-color: lightgray;
+     border: 2px solid #000;
+     cursor: pointer;  
+}
+
+.create:hover{
+    background-color: gray;
+    border:2px solid #000;
+}
+
+.subencabezado{
+    background: #343a40;
+    color:white;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position:static;
+    display: flex;
+
+}
+h1{
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    display: flex;
+    text-align:center;
+
+
+}
+
+
+.header{
+    position: fixed;
+    width: 100%;
+    border-style: none;
+    position: static;
+}
+
+.navbar-brand img{
+    width: 100px;
+}
+
+.footer{
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    border-style: none;
+    position: static;
+}
+
+.mb-2 svg{
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    margin-right: 20px;
+}
+
+@media (max-width: 430px){
+    .navbar-brand img{
+        width: 70px;
+        display: 70px;
+    }
+    aside.imgp{
+        width: 10px;
+        display: 10px;
+        border-radius:30%;
+
+    }
+    .cards{
+        grid-template-columns: repeat(auto-fill, 140px);
+    }
+    .card{
+        grid-template-columns: repeat(auto-fill, 50px);
+        width:70px;
+    }
+    aside{
+        width: 70px;
+        display: 70px;
+        grid-template-columns: repeat(auto-fill, 70px);
+    }
+
+    .product-card{
+        width:140px;
+    }
+    .product-card img{
+        width: 140px;
+        height: 140px;
+    }
+
+    
+}

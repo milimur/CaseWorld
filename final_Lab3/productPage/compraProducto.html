@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contactPage</title>
-    <link rel="Stylesheet" type="text/css" href="./styleContact.css"/>
-    <link  
-    rel="stylesheet" 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
-    crossorigin="anonymous"/>
+    <title>CompraProducto</title>
+    <link rel="stylesheet" href="estiloCompraProducto.css">
+    <script src="https://kit.fontawesome.com/a2dd6045c4.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
 </head>
 <body>
-    <!--header-->
     <header> 
         <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
@@ -42,8 +40,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/contactPage/contact.html">Contacto</a><!--completar con su html (diego)-->
-                        </li>
+                            <a class="nav-link" href="/contactPage/contact.html">Contacto</a>
                         <li class="nav-item">
                             <a class="nav-link" href="/returnsOrderPage/returns.html">Devoluciones</a>
                         </li>
@@ -53,7 +50,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="/userPage/logIn/logIn.html">
+                                    <a class="dropdown-item" href="/userPage/logIn/Index.html">
                                         Cuenta
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 
@@ -89,55 +86,136 @@
         </nav>
     </header>
 
-    <!--body-->
-    <div class="banner">
-        <h1 class="banner-title">Contacto</h1>
-    </div>
-    
-    <div class="container"> 
+<!-- mi parte del boody aca -->
 
+<div class="container">
+    
+    <div class="cardProducto">
         <div class="content">
-            <h2 class="main-title">Comunícate con nosotros</h2>
-            <p class="subtitle">Complete el siguiente formulario y en breve le enviaremos un presupuesto detallado con nuestros servicios y nuestra mejor oferta.</p>
-            <div class="form-container">
-                <div class="location">
-                    <h3 class="location-title">Ubicación en Mendoza</h3>
-                    <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3359.634896173064!2d-68.84405098482067!3d-32.89092498093968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e090df3125c45%3A0x497d7f0dcdfabf85!2sMendoza%2C%20Capital%20de%20Mendoza!5e0!3m2!1ses!2sar!4v1585340475721!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <h1 id="titulo"> Nombre del producto </h1>
+            <img src="siliconeLogoS.png" class="left">
+            <form id="formulario">
+                <ul> 
+                    <li> Modelos disponibles: </li>
+                    <select> 
+                        <option disabled selected= "" id="opcion"> Seleccionar </option>
+                        <option> iPhone </option>
+                        <option> Samsung </option>
+                        <option> Motorola </option>
+                    </select>
+            
+                    <br>
+                    <br>
+            
+                    <li> Colores: </li>
+                    <select> 
+                        <option disabled selected= "" id="opcion"> Seleccionar </option>
+                        <option> Azul </option>
+                        <option> Amarillo </option>
+                        <option> Blanco </option>
+                        <option> Beige </option>
+                        <option> Negro </option>
+                        <option> Rojo </option>
+                        <option> Verde </option>
+                        <option> Rosado </option>
+                        <option> Violeta </option>
+                        <option> Plateado </option>
+                    </select>
+                
+                    <br>
+                    <br>
+            
+                    <li> Cantidad: </li>
+                    <select> 
+                        <option disabled selected= "" id="opcion"> Seleccionar </option>
+                        <option> 1 </option>
+                        <option> 2 </option>
+                        <option> 3 </option>
+                        <option> 4 </option>
+                        <option> 5 </option>
+                        <option> 6 </option>
+                        <option> 7 </option>
+                        <option> 8 </option>
+                        <option> 9 </option>
+                        <option> 10 </option>
+                        <option> 11 </option>
+                        <option> 12 </option>
+                        <option> 13 </option>
+                        <option> 14 </option>
+                        <option> 15 </option>
+                        <option> 16 </option>
+                        <option> 17 </option>
+                        <option> 18 </option>
+                        <option> 19 </option>
+                        <option> 20 </option>
+                    </select>
+            
+            
+                </ul>
+                
+            </form> 
+
+            <h3 class="precio"> $$$ </h3>
+            <br>
+                
+            
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="button" class="btn btn-secondary">♥</button>
+                <button type="button" class="btn btn-secondary"> Añadir al carrito</button>
+            </div>
+            
+        </div>
+    </div> 
+    <h3 id="simil"> Productos similares ...</h3> 
+
+    <div class="container mt-4">
+        
+
+        <!-- Fila 2: Cards de productos similares -->
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/productImage/funda_android.jpg" class="card-img-top" alt="Producto similar 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Funda Android</h5>
+                        <p class="card-text">Descripción </p>
+                        <a href="/productPage/compraProducto.html" class="btn btn-secondary">Ver Producto</a>
+                    </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="apellido">Apellido</label>
-                        <input type="text" id="apellido" name="apellido" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="consulta">Consulta o comentario adicional</label>
-                        <textarea id="consulta" name="consulta" rows="4" required></textarea>
-                    </div>
-                    <button type="submit">Enviar Consulta</button>
-                </form>
             </div>
-            <div class="newsletter">
-                <h2 class="newsletter-title">Quiero recibir novedades y promociones</h2>
-                <form class="newsletter-form">
-                    <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Email" required>
-                    <button type="submit">Enviar</button>
-                </form>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/productImage/funda_clear.jpg" class="card-img-top" alt="Producto similar 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Funda clear</h5>
+                        <p class="card-text">Descripción</p>
+                        <a href="/productPage/compraProducto.html" class="btn btn-secondary">Ver Producto</a>
+                    </div>
+                </div>
             </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/productImage/funda_Iphone.jpg" class="card-img-top" alt="Producto similar 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Funda iPhone</h5>
+                        <p class="card-text">Descripción</p>
+                        <a href="/productPage/compraProducto.html" class="btn btn-secondary">Ver Producto</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Puedes agregar más columnas de productos similares aquí -->
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     
+
+</div>
+
+<!-- hasta aca mi parte -->
     <footer>
         <div class="container-fluid">
             <div class="row p-5 bg-dark text-white">
@@ -192,10 +270,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
-        <img src="pngegg (1).png" alt="WhatsApp">
-    </a>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>

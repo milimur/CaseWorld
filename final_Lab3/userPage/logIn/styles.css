@@ -1,0 +1,129 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+.Userform{
+font-family: Arial, Helvetica, sans-serif;
+background: linear-gradient(150deg,lightgray, white);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+min-height: 10vh;
+}
+
+form.user{
+background-color:linear-gradient(150deg,lightgray, white);
+display: flex;
+flex-direction: column; 
+padding: 50px;
+width: 500px;
+text-align: center;
+min-height:1 vh;
+
+}
+ 
+form h5{
+font-size: 30;
+margin-bottom: 25px;
+font-weight:bolder,
+}
+
+input{
+    padding: 15px;
+    border-radius: 25px;
+    background-color: transparent;
+    border: 2px solid #000;
+    margin-bottom: 20px;
+    outline: none;
+    color:#000;
+    font-size: 16px;
+}
+
+::placeholder{
+    color: lightslategray; 
+}
+.create{
+    background-color: lightgray;
+     border: 2px solid #000;
+     cursor: pointer;  
+}
+
+.create:hover{
+    background-color: gray;
+    border:2px solid #000;
+}
+
+aside{
+    border: 2px transparent;
+    margin-bottom: 20px;
+}
+
+
+.logo{
+    background: #343a40;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    border-style: none;
+    position: static;
+    border:none;
+    padding: 20px;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    border-style: none;
+    position: static;
+}
+
+.navbar-brand img{
+    width: 100px;
+}
+
+.footer{
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    border-style: none;
+    position: static;
+}
+
+.mb-2 svg{
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    margin-right: 20px;
+}
+
+
+@media(max-width:991px) {
+   body{
+    padding: 30px;
+   }
+   form{
+    width: 340px;
+   }
+   header{
+    width: 100%;
+    padding: 0;
+    position: static;
+   }
+   .container-fluid{
+    padding: 30px;
+   }
+   .navbar-brand img{
+    width: 70px;
+    display: 70px;
+    }
+}
+
+
+
+
+
+
+

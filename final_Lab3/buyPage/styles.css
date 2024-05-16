@@ -14,15 +14,6 @@ body{
     width: 100px;
 }
 
-.color-btn {
-    width: 30px;
-    height: 30px;
-    border-radius: 5px; /* Ajustar para que los botones sean más cuadrados */
-    border: 1px solid #ddd;
-    display: inline-block;
-    margin-right: 5px;
-}
-
 .container{
     z-index: 0;
     background: white;
@@ -45,7 +36,8 @@ body{
 }
 
 .card img{
-    height: 250px;
+    width: 300px;
+    height: 300px;
 }
 
 .footer{
@@ -78,4 +70,6 @@ body{
         width: 140px;
         height: auto;
     }
+
+    
 }

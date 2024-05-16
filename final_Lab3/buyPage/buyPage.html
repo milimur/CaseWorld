@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mainPage</title>
-    <link rel="Stylesheet" type="text/css" href="/mainPage/styles.css"/>
+    <link rel="Stylesheet" type="text/css" href="./styles.css"/>
     <link  
     rel="stylesheet" 
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -53,7 +53,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="/userPage/logIn/Index.html">
+                                    <a class="dropdown-item" href="/userPage/logIn/logIn.html">
                                         Cuenta
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 
@@ -89,108 +89,153 @@
         </nav>
     </header>
 
-    <!--body-->
-    <div class="container"> 
-        <div class="row row-cols-1 row-cols-md-4 g-3 justify-content-center">
-            <div class="col">
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Columna 1: Área de Iniciar Sesión o Registrarse -->
+            <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
                 <div class="card">
-                    <a class="imageCard" href="/productPage/compraProducto.html">
-                        <img src="../productImage/funda_android.jpg" class="card-img-top img-fluid w-100" alt="">
-                    </a>
-                    <div class="card-body"> 
-                        <a href="/productPage/compraProducto.html" class="no-underline"><span class="card-title fs-2">Funda Android</span></a>
-                      <p class="fs-4">12 de Febrero 2016</p>
-                      <span class="text-secondary fs-4">Estado: Iniciado</span>
+                    <div class="card-header">
+                        Iniciar Sesión 
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email" placeholder="Ingrese su correo ">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Contraseña</label>
+                                <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                            <hr>
+                            <p class="text-center mb-0">¿No tienes cuenta? <a href="#">Regístrate aquí</a></p>
+                        </form>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard" href="/productPage/compraProducto.html">
-                        <img src="/productImage/funda_Iphone.jpg" class="card-img-top img-fluid w-100" alt="">
-                    </a>
-                    <div class="card-body"> 
-                        <a href="/productPage/compraProducto.html" class="no-underline"><span class="card-title fs-2">Funda iPhone</span></a>
-                      <p class="fs-4">13 de Marzo 2017</p>
-                      <span class="text-primary fs-4">Estado: En Proceso</span>
+            <!-- Columna 2: Resumen de Compra -->
+            <div class="col-lg-6">
+                <div class="card border shadow-0">
+                    <div class="m-4">
+                        <h4 class="card-title mb-4">Resumen de tu compra</h4>
+                        <!-- Item 1 -->
+                        <div class="row gy-3 mb-4">
+                            <div class="col-lg-5">
+                                <div class="me-lg-5">
+                                    <div class="d-flex">
+                                        <img src="/productImage/funda_Iphone.jpg" class="border rounded me-3" style="width: 96px; height: 96px;" />
+                                        <div class="">
+                                            <a href="#" class="nav-link">Funda Puffer</a>
+                                            <p class="text-muted">IPhone 15</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Select y Precio -->
+                            <div class="col-lg-2 col-sm-6 col-6 d-flex flex-row flex-lg-column flex-xl-row text-nowrap">
+                                <div class="">
+                                    <!-- Reemplazamos el dropdown por un input de tipo number -->
+                                    <input type="number" class="form-control me-4" min="1" value="1">
+                                </div>
+                                <div class="">
+                                    <text class="h6">$3200</text> <br />
+                                    <small class="text-muted text-nowrap"> $3200 c/u </small>
+                                </div>
+                            </div>
+                            <!-- Botones de Acción -->
+                            <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
+                                <div class="float-md-end">
+                                    <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                                    <a href="#" class="btn btn-light border text-danger icon-hover-danger"> Quitar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 2 (repetir estructura para más items) -->
+                        <!-- ... -->
+                        <div class="row gy-3 mb-4">
+                            <div class="col-lg-5">
+                                <div class="me-lg-5">
+                                    <div class="d-flex">
+                                        <img src="/productImage/funda_android.jpg" class="border rounded me-3" style="width: 96px; height: 96px;" />
+                                        <div class="">
+                                            <a href="#" class="nav-link">Funda transparente</a>
+                                            <p class="text-muted">Samsung S23</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Select y Precio -->
+                            <div class="col-lg-2 col-sm-6 col-6 d-flex flex-row flex-lg-column flex-xl-row text-nowrap">
+                                <div class="">
+                                    <!-- Reemplazamos el dropdown por un input de tipo number -->
+                                    <input type="number" class="form-control me-4" min="1" value="1">
+                                </div>
+                                <div class="">
+                                    <text class="h6">$3000</text> <br />
+                                    <small class="text-muted text-nowrap"> $3000 c/u </small>
+                                </div>
+                            </div>
+                            <!-- Botones de Acción -->
+                            <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
+                                <div class="float-md-end">
+                                    <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                                    <a href="#" class="btn btn-light border text-danger icon-hover-danger"> Quitar</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard" href="/productPage/compraProducto.html">
-                        <img src="../productImage/funda_clear.jpg" class="card-img-top img-fluid w-100" alt="">
-                    </a>
-                    <div class="card-body"> 
-                        <a href="/productPage/compraProducto.html" class="no-underline"><span class="card-title fs-2">Funda clear</span></a>
-                      <p class="fs-4">14 de Abril 2018</p>
-                      <span class="text-danger fs-4">Estado: Rechazado</span>
+            <!-- Columna 3: Resumen de Precio -->
+            <div class="col-lg-3">
+                <div class="card mb-4">
+                    <div class="card mb-3 border shadow-0">
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label class="form-label">Tienes un cupón?</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control border" name="" placeholder="Código de cupón" />
+                                        <button class="btn btn-light border">Aplicar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard" href="/productPage/compraProducto.html">
-                        <img src="../productImage/funda_android.jpg" class="card-img-top img-fluid w-100" alt="">
-                    </a>
-                    <div class="card-body"> 
-                        <a href="/productPage/compraProducto.html" class="no-underline"><span class="card-title fs-2">Funda Android</span></a>
-                      <p class="fs-4">15 de Mayo 2019</p>
-                      <span class="text-success fs-4">Estado: Resuelto</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard" href="/productPage/compraProducto.html">
-                        <img src="../productImage/funda_Iphone.jpg" class="card-img-top img-fluid w-100" alt="">
-                    </a>
-                    <div class="card-body"> 
-                        <a href="../productPage/" class="no-underline"><span class="card-title fs-2">Funda iPhone</span></a>
-                      <p class="fs-4">16 de Junio 2020</p>
-                      <span class="text-success fs-4">Estado: Resuelto</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard" href="/productPage/compraProducto.html">
-                        <img src="../productImage/funda_clear.jpg" class="card-img-top img-fluid w-100" alt="">
-                    </a>
-                    <div class="card-body"> 
-                        <a href="/productPage/compraProducto.html" class="no-underline"><span class="card-title fs-2">Funda clear</span></a>
-                      <p class="fs-4">17 de Julio 2021</p>
-                      <span class="text-success fs-4">Estado: Resuelto</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard" href="/productPage/compraProducto.html">
-                        <img src="../productImage/funda_android.jpg" class="card-img-top img-fluid w-100" alt="">
-                    </a>
-                    <div class="card-body"> 
-                        <a href="/productPage/compraProducto.html" class="no-underline"><span class="card-title fs-2">Funda Android</span></a>
-                      <p class="fs-4">18 de Agosto 2022</p>
-                      <span class="text-success fs-4">Estado: Resuelto</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard" href="/productPage/compraProducto.html">
-                        <img src="../productImage/funda_Iphone.jpg" class="card-img-top img-fluid w-100" alt="">
-                    </a>
-                    <div class="card-body"> 
-                        <a href="/productPage/compraProducto.html" class="no-underline"><span class="card-title fs-2">Funda iPhone</span></a>
-                      <p class="fs-4">19 de Septiembre 2023</p>
-                      <span class="text-success fs-4">Estado: Resuelto</span>
+                    <!-- Resumen de Precio -->
+                    <div class="card shadow-0 border">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <p class="mb-2">Precio total:</p>
+                                <p class="mb-2">$6200.00</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <p class="mb-2">Descuentos:</p>
+                                <p class="mb-2 text-success">-$600.00</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <p class="mb-2">Envío:</p>
+                                <p class="mb-2">Sin estimar</p>
+                            </div>
+                            <hr />
+                            <div class="d-flex justify-content-between">
+                                <p class="mb-2">Precio final:</p>
+                                <p class="mb-2 fw-bold">$5600.00</p>
+                            </div>
+                            <!-- Botones de Acción -->
+                            <div class="mt-3">
+                                <a href="#" class="btn btn-success w-100 shadow-0 mb-2">Continuar a Envios</a>
+                                <a href="#" class="btn btn-light w-100 border mt-2">Cancelar pedido</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <footer>
         <div class="container-fluid">
             <div class="row p-5 bg-dark text-white">
@@ -244,7 +289,7 @@
             </div>
         </div>
     </footer>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
