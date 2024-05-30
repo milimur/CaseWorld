@@ -1,16 +1,55 @@
-body{
+body {
     padding: 0;
     margin: 0;
 }
 
-.header{
-    position: fixed;
+.header {
     width: 100%;
     border-style: none;
-    position: static;
 }
 
-.navbar-brand img{
+#encabezado {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#encabezado h1 {
+    margin: 0;
+    padding-left: 20px;
+}
+
+#encabezado nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#encabezado nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+#encabezado nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contenido {
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+#main {
+    margin-top: 200px;
+}
+
+.navbar-brand img {
     width: 100px;
 }
 
@@ -28,23 +67,21 @@ body{
     color: black;
 }
 
-.card{
+.card {
     padding: 0;
 }
 
-.card img{
+.card img {
     height: 250px;
 }
 
-.footer{
-    position: fixed;
+.footer {
     width: 100%;
     padding: 0;
     border-style: none;
-    position: static;
 }
 
-.mb-2 svg{
+.mb-2 svg {
     width: 20px;
     height: 20px;
     fill: currentColor;
@@ -71,18 +108,18 @@ body{
     height: 40px;
 }
 
-@media (max-width: 430px){
-    .navbar-brand img{
+@media (max-width: 430px) {
+    .navbar-brand img {
         width: 70px;
         display: 70px;
     }
 
     .card {
-        width: 90%; 
+        width: 90%;
         margin: 10px auto;
     }
 
-    .card img{
+    .card img {
         width: 140px;
         height: auto;
     }

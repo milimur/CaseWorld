@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>document</title>
-    <link rel="Stylesheet" type="text/css" href="./styles.css"/>
-    <script src="main.js"></script>
-    <link  
-    rel="stylesheet" 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
-    crossorigin="anonymous"/>
+    <title>User Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a2dd6045c4.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/">
+  
+
 </head>
 <body>
     <!--header-->
-    <header id="encabezado"> 
+    <header> 
         <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
+
                 <a class="navbar-brand" href="/mainPage/index.html">
                     <img src="/icons_CaseWorld/caseWorld.png"alt=""/>
                 </a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -54,7 +56,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="/userPage/logIn/index.html">
+                                    <a class="dropdown-item" href="/userPage/logIn/Index.html">
                                         Cuenta
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 
@@ -91,36 +93,109 @@
     </header>
 
     <!--body-->
-    <div id="carousel" class="carousel slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="/icons_CaseWorld/banner2.jpg" class="d-block w-100" alt="">
+    <div class="Userform">   
+        <aside>
+            <div>
+                <img src=funda.jpeg  float=left width="300px" height="800" >
             </div>
-            <div class="carousel-item">
-                <img src="/icons_CaseWorld/banner1.jpeg" class="d-block w-100" alt=".">
+        </aside>
+
+       <form class="user" method="post" id="validation" novalidate> 
+            <a class="user-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" color="#000" class="bi bi-person" viewBox="0 0 16 16">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                </svg>
+            </a>
+
+            <h5> SUMATE A NUESTRA COMUNIDAD!</h5> 
+            
+                <input type="number" placeholder="DNI" required>
+                <small>Por favor ingrese su DNI </small>
+            
+
+            
+                <input type="email" placeholder="EMAIL" required>
+                <small>Por favor ingrese su Email </small>
+            
+
+            
+                <input type="text" placeholder="TELEFONO(OPCIONAL)" required>
+                <small>Por favor ingrese su Telefono </small>
+           
+
+            
+                <input type="password" placeholder="CONTRASEÑA" required>
+                <small>Por favor ingrese Contraseña </small>
+            
+
+            
+                <input type="password" placeholder="CONFIRMAR CONTRASEÑA" required>
+                <small>Por favor confirme contraseña </small> 
+            
+
+            <div class="pyp" aria-required=""> 
+                    <input class="" type="checkbox" value="" id="invalidCheck" required>
+                     Acepto los <a href="#">Terminos y Condiciones</a> y las <a href="#">Politicas de Privacidad</a>
+                      de Case CaseWorld. 
+                    <small>Debe aceptar los terminos y condiciones para poder REGISTRARSE </small>
             </div>
-            <div class="carousel-item">
-                <img src="/icons_CaseWorld/banner3.jpeg" class="d-block w-100" alt="">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+            <input type="submit" class="create" value="REGISTRARSE" >
+        </form>
+      
+
+
+   <script>
+       document.getElementById("validation").addEventListener("submit", function(event) {
+        const form = event.target;
+        const inputs = form.querySelectorAll('input[required]');
+        const password = form.querySelector('input[type="password"][placeholder="CONTRASEÑA"]');
+        const confirmPassword = form.querySelector('input[type="password"][placeholder="CONFIRMAR CONTRASEÑA"]');
+        let valid = true;
+
+      inputs.forEach(input => {
+        const small = input.nextElementSibling;
+
+            if (!input.checkValidity()) {
+                small.style.display = 'block';
+                valid = false;
+            } else {
+                small.style.display = 'none';
+            }
+        });
+            // Validación adicional para comprobar que las contraseñas coinciden
+            if (password.value !== confirmPassword.value) {
+                const confirmPasswordSmall = confirmPassword.nextElementSibling;
+                confirmPasswordSmall.textContent = "Las contraseñas no coinciden";
+                confirmPasswordSmall.style.display = 'block';
+                valid = false;
+            } else {
+                const confirmPasswordSmall = confirmPassword.nextElementSibling;
+                confirmPasswordSmall.textContent = "Por favor confirme contraseña"; // Restaurar el mensaje original si las contraseñas coinciden
+                confirmPasswordSmall.style.display = 'none';
+            }
+
+            if (!valid) {
+                event.preventDefault();
+                event.stopPropagation();
+            }  else {
+            // Redirigir a la página de perfil
+                window.location.href = "profileInsert.html"; 
+            }
+     });
+
+         
+    </script>
+
+
+        <aside>
+            <img src=funda.jpeg  float=left width="300px" height="800" >
+        </aside>
+
     </div>
-    
-    <div class="container mt-4">
-        <div class="row row-cols-1 row-cols-sm-4 g-3 justify-content-center" id="card-container"></div>
-    </div>
+
+
+
+
     
 
     <footer>
@@ -177,10 +252,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
-        <img src="/icons_CaseWorld/pngegg (1).png" alt="WhatsApp">
-    </a>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
 </body>
+
 </html>

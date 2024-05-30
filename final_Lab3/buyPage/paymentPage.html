@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mainPage</title>
-    <link rel="Stylesheet" type="text/css" href="../mainPage/styles.css"/>
+    <link rel="Stylesheet" type="text/css" href="/mainPage/styles.css"/>
     <link  
     rel="stylesheet" 
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
     crossorigin="anonymous"/>
-    <link rel="Stylesheet" type="text/css" href="./returns.css"/>
 </head>
 <body>
     <!--header-->
-    <header id="encabezado"> 
+    <header> 
         <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../mainPage/index.html">
-                    <img src="../icons_CaseWorld/caseWorld.png"alt=""/>
+                <a class="navbar-brand" href="/mainPage/index.html">
+                    <img src="/icons_CaseWorld/caseWorld.png"alt=""/>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
@@ -28,7 +27,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="../mainPage/index.html">Inicio</a>
+                            <a class="nav-link" href="/mainPage/index.html">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" 
@@ -36,17 +35,17 @@
                                 Productos
                             </a>
                             <ul class="dropdown-menu">
-                                <a class="dropdown-item" href="../filterProductPage/filter.html">All</a>
-                                <a class="dropdown-item" href="../filterProductPage/filter.html">Funda</a>
-                                <a class="dropdown-item" href="../filterProductPage/filter.html">Cargadores</a>
-                                <a class="dropdown-item" href="../filterProductPage/filter.html">Protectores de pantalla</a>
+                                <a class="dropdown-item" href="/filterProductPage/filter.html">All</a>
+                                <a class="dropdown-item" href="/filterProductPage/filter.js">Funda</a>
+                                <a class="dropdown-item" href="/filterProductPage/filter.html">Cargadores</a>
+                                <a class="dropdown-item" href="/filterProductPage/filter.html">Protectores de pantalla</a>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../contactPage/contact.html">Contacto</a>
+                            <a class="nav-link" href="/contactPage/contact.html">Contacto</a><!--completar con su html (diego)-->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../returnsOrderPage/returns.html">Devoluciones</a>
+                            <a class="nav-link" href="/returnsOrderPage/returns.html">Devoluciones</a><!--completar con su html (cris)-->
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -82,176 +81,184 @@
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit" href="..../productPage/product.html">Search</button>
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit" href="/productPage/filter.html">Buscar</button>
                     </form>
                 </div>
             </div>
         </nav>
     </header>
-
-    <!--body-->
-    <div class="main-container"> 
-        <div class="row row-cols-1 row-cols-md-4 g-3 justify-content-center">
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard" href="../purcheaseOrder/purcheaseOrder.html">
-                        <img src="../productImage/funda_android.jpg" class="card-img-top img-fluid w-100" alt="">
-                    </a>
-                    <div class="card-body"> 
-                        <a href="../purcheaseOrder/purcheaseOrder.html" class="no-underline"><span class="card-title fs-2">Funda Android</span></a>
-                      <p class="fs-4">12 de Febrero 2016</p>
-                      <span class="text-secondary fs-4">Estado: Iniciado</span>
+   
+        <title>Formulario de Pago</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            .payment-option {
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                padding: 20px;
+                text-align: center;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+            }
+            .payment-option:hover, .payment-option.active {
+                border-color: #031d38;
+                background-color: #f8f9fa;
+            }
+            .payment-option img {
+                max-width: 50px;
+            }
+            .payment-form {
+                display: none;
+            }
+            .form-control-sm {
+                font-size: 0.875rem;
+                padding: 0.5rem;
+            }
+            .form-control-xs {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Columna del Formulario -->
+                <div class="col-lg-9">
+                    <h2>Selecciona el método de pago</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="payment-option" id="option1" onclick="showForm('form-tarjeta')">
+                                <img src="tarjeta.png" alt="Tarjeta"> <!-- Coloca aquí tu ilustración -->
+                                <p>Tarjeta</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="payment-option" id="option2" onclick="showForm('form-transferencia')">
+                                <img src="transferencia.png" alt="Transferencia"> <!-- Coloca aquí tu ilustración -->
+                                <p>Transferencia</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="payment-option" id="option3" onclick="showForm('form-mercado-pago')">
+                                <img src="mercado-pago.png" alt="Mercado Pago"> <!-- Coloca aquí tu ilustración -->
+                                <p>Mercado Pago</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="form-tarjeta" class="payment-form mt-4">
+                        <h3>Detalles de la Tarjeta</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="nombre-tarjeta">Nombre en la Tarjeta</label>
+                                <input type="text" class="form-control form-control-sm form-control-xs" id="nombre-tarjeta" placeholder="Nombre en la Tarjeta">
+                            </div>
+                            <div class="form-group">
+                                <label for="numero-tarjeta">Número de Tarjeta</label>
+                                <input type="text" class="form-control form-control-sm form-control-xs" id="numero-tarjeta" placeholder="Número de Tarjeta">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="fecha-expiracion">Fecha de Expiración</label>
+                                    <input type="text" class="form-control form-control-sm form-control-xs" id="fecha-expiracion" placeholder="MM/AA">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="codigo-cvc">Código CVC</label>
+                                    <input type="text" class="form-control form-control-sm form-control-xs" id="codigo-cvc" placeholder="CVC">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+    
+                    <div id="form-transferencia" class="payment-form mt-4">
+                        <h3>Detalles de la Transferencia</h3>
+                        <p>Banco: Banco Ejemplo</p>
+                        <p>Número de Cuenta: 1234567890</p>
+                        <p>CLABE: 123456789012345678</p>
+                        <p>Titular: Nombre del Titular</p>
+                        <p>Referencia: Tu Nombre o Número de Pedido</p>
+                    </div>
+    
+                    <div id="form-mercado-pago" class="payment-form mt-4 text-center">
+                        <h3>Código QR para Mercado Pago</h3>
+                        <img src="qr-code.png" alt="Código QR"> <!-- Coloca aquí tu código QR -->
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard" href="../purcheaseOrder/purcheaseOrder.html">
-                        <img src="../productImage/funda_Iphone.jpg" class="card-img-top img-fluid w-100" alt="">
-                    </a>
-                    <div class="card-body"> 
-                        <a href="../purcheaseOrder/purcheaseOrder.html" class="no-underline"><span class="card-title fs-2">Funda iPhone</span></a>
-                      <p class="fs-4">13 de Marzo 2017</p>
-                      <span class="text-primary fs-4">Estado: En Proceso</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard" href="../purcheaseOrder/purcheaseOrder.html">
-                        <img src="../productImage/funda_transparente.jpg" class="card-img-top img-fluid w-100" alt="">
-                    </a>
-                    <div class="card-body"> 
-                        <a href="../purcheaseOrder/purcheaseOrder.html" class="no-underline"><span class="card-title fs-2">Funda Transparente</span></a>
-                      <p class="fs-4">14 de Abril 2018</p>
-                      <span class="text-danger fs-4">Estado: Rechazado</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard" href="../purcheaseOrder/purcheaseOrder.html">
-                        <img src="../productImage/funda_android.jpg" class="card-img-top img-fluid w-100" alt="">
-                    </a>
-                    <div class="card-body"> 
-                        <a href="../purcheaseOrder/purcheaseOrder.html" class="no-underline"><span class="card-title fs-2">Funda Android</span></a>
-                      <p class="fs-4">15 de Mayo 2019</p>
-                      <span class="text-success fs-4">Estado: Resuelto</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard p-2" href="../purcheaseOrder/purcheaseOrder.html">
-                        <div class="row no-gutters">
-                            <div class="col p-0">
-                                <img src="../productImage/funda_Iphone.jpg" class="img-fluid micho" alt="">
-                            </div>
-                            <div class="col p-0">
-                                <img src="../productImage/funda_Iphone.jpg" class="img-fluid micho" alt="">
+    
+                <!-- Columna del Resumen de Compra -->
+                <div class="col-lg-3">
+                    <div class="card mb-4">
+                        <div class="card mb-3 border shadow-0">
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label class="form-label">Tienes un cupón?</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control border" name="" placeholder="Código de cupón" />
+                                            <button class="btn btn-light border">Aplicar</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                        <div class="row no-gutters">
-                            <div class="col p-0">
-                                <img src="../productImage/funda_Iphone.jpg" class="img-fluid micho" alt="">
-                            </div>
-                            <div class="col p-0">
-                                <img src="../productImage/funda_Iphone.jpg" class="img-fluid micho" alt="">
-                            </div>
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <a href="../purcheaseOrder/purcheaseOrder.html" class="no-underline"><span class="card-title fs-2">Funda iPhone</span></a>
-                        <p class="fs-4">16 de Junio 2020</p>
-                        <span class="text-success fs-4">Estado: Resuelto</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard p-2" href="../purcheaseOrder/purcheaseOrder.html">
-                        <div class="row no-gutters">
-                            <div class="col p-0">
-                                <img src="../productImage/funda_transparente.jpg" class="img-fluid micho" alt="">
-                            </div>
-                            <div class="col p-0">
-                                <img src="../productImage/funda_transparente.jpg" class="img-fluid micho" alt="">
-                            </div>
-                        </div>
-                        <div class="row no-gutters">
-                            <div class="col p-0">
-                                <img src="../productImage/funda_transparente.jpg" class="img-fluid micho" alt="">
-                            </div>
-                            <div class="col p-0">
-                                <img src="../productImage/funda_transparente.jpg" class="img-fluid micho" alt="">
+                        <!-- Resumen de Precio -->
+                        <div class="card shadow-0 border">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <p class="mb-2">Precio total:</p>
+                                    <p class="mb-2">$6200.00</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="mb-2">Descuentos:</p>
+                                    <p class="mb-2 text-success">-$600.00</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="mb-2">Envío:</p>
+                                    <p class="mb-2">Calculando...</p>
+                                </div>
+                                <hr />
+                                <div class="d-flex justify-content-between">
+                                    <p class="mb-2">Precio final:</p>
+                                    <p class="mb-2 fw-bold">$5600.00</p>
+                                </div>
+                                <!-- Botones de Acción -->
+                                <div class="mt-3">
+                                    <a href="#" class="btn btn-success w-100 shadow-0 mb-2">Continuar a Pagos</a>
+                                    <a href="#" class="btn btn-light w-100 border mt-2">Regresar</a>
+                                    <a href="#" class="btn btn-light w-100 border mt-2">Cancelar pedido</a>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                    <div class="card-body"> 
-                        <a href="../purcheaseOrder/purcheaseOrder.html" class="no-underline"><span class="card-title fs-2">Funda Transparente</span></a>
-                      <p class="fs-4">17 de Julio 2021</p>
-                      <span class="text-success fs-4">Estado: Resuelto</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard p-2" href="../purcheaseOrder/purcheaseOrder.html">
-                        <div class="row no-gutters">
-                            <div class="col p-0">
-                                <img src="../productImage/funda_android.jpg" class="img-fluid micho" alt="">
-                            </div>
-                            <div class="col p-0">
-                                <img src="../productImage/funda_android.jpg" class="img-fluid micho" alt="">
-                            </div>
-                        </div>
-                        <div class="row no-gutters">
-                            <div class="col p-0">
-                                <img src="../productImage/funda_android.jpg" class="img-fluid micho" alt="">
-                            </div>
-                            <div class="col p-0">
-                                <img src="../productImage/funda_android.jpg" class="img-fluid micho" alt="">
-                            </div>
-                        </div>
-                    </a>
-                    <div class="card-body"> 
-                        <a href="../purcheaseOrder/purcheaseOrder.html" class="no-underline"><span class="card-title fs-2">Funda Android</span></a>
-                      <p class="fs-4">18 de Agosto 2022</p>
-                      <span class="text-success fs-4">Estado: Resuelto</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard p-2" href="../purcheaseOrder/purcheaseOrder.html">
-                        <div class="row no-gutters">
-                            <div class="col p-0">
-                                <img src="../productImage/funda_Iphone.jpg" class="img-fluid micho" alt="">
-                            </div>
-                            <div class="col p-0">
-                                <img src="../productImage/funda_Iphone.jpg" class="img-fluid micho" alt="">
-                            </div>
-                        </div>
-                        <div class="row no-gutters">
-                            <div class="col p-0">
-                                <img src="../productImage/funda_Iphone.jpg" class="img-fluid micho" alt="">
-                            </div>
-                            <div class="col p-0">
-                                <img src="../productImage/funda_Iphone.jpg" class="img-fluid micho" alt="">
-                            </div>
-                        </div>
-                    </a>
-                    <div class="card-body"> 
-                        <a href="../purcheaseOrder/purcheaseOrder.html" class="no-underline"><span class="card-title fs-2">Funda iPhone</span></a>
-                      <p class="fs-4">19 de Septiembre 2023</p>
-                      <span class="text-success fs-4">Estado: Resuelto</span>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     
+        <script>
+            function showForm(formId) {
+                // Ocultar todos los formularios
+                document.querySelectorAll('.payment-form').forEach(function(form) {
+                    form.style.display = 'none';
+                });
+    
+                // Remover clase activa de todas las opciones de pago
+                document.querySelectorAll('.payment-option').forEach(function(option) {
+                    option.classList.remove('active');
+                });
+    
+                // Mostrar el formulario correspondiente
+                document.getElementById(formId).style.display = 'block';
+    
+                // Agregar clase activa a la opción seleccionada
+                document.getElementById('option' + formId.split('-')[1]).classList.add('active');
+            }
+        </script>
+    </body>
+    </html>
+    
+
+
+
     <footer>
         <div class="container-fluid">
             <div class="row p-5 bg-dark text-white">
@@ -263,7 +270,7 @@
                         <p class="h5 mb-3">Home</p>
                         <div class="mb-2">
                             <a class="dropdown-item" href="/mainPage/index.html">Inicio</a>
-                            <a class="dropdown-item" href="/filterProductPage/index.html">Productos</a>
+                            <a class="dropdown-item" href="/filterProductPage/filter.html">Productos</a>
                             <a class="dropdown-item" href="/contactPage/">Contactos</a>
                             <a class="dropdown-item" href="/returnsOrderPage/">Devoluciones</a>
                             <a class="dropdown-item" href="/logInPage/">Usuario</a>
@@ -307,7 +314,5 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="./returns.js"></script>
-
 </body>
 </html>

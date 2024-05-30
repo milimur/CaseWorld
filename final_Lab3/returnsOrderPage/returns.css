@@ -10,7 +10,6 @@ body{
     position: static;
 }
 
-
 #encabezado {
     background-color: #333;
     color: #fff;
@@ -43,30 +42,28 @@ body{
     text-decoration: none;
 }
 
+.contenido {
+    margin-top: 70px; /* Ajusta el margen superior para evitar que el contenido se superponga con el encabezado */
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
 .navbar-brand img{
     width: 100px;
 }
 
-.main-container{
-    z-index: 0;
-    background: white;
-    place-content: center;
-    margin-bottom: 30px;
-    margin-top: 170px;
-    margin-left: 100px;
-    margin-right: 100px;
-    border: 0;
-    overflow: hidden;
+.color-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px; /* Ajustar para que los botones sean más cuadrados */
+    border: 1px solid #ddd;
+    display: inline-block;
+    margin-right: 5px;
 }
 
-.card{
-    width: 18rem;
-    /*grid-template-columns: repeat(auto-fill);*/
-}
-
-.card img{
-    width: 200px;
-    height: 200px;
+.no-underline {
+    text-decoration: none;
+    color: black;
 }
 
 .footer{
@@ -84,23 +81,43 @@ body{
     margin-right: 20px;
 }
 
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+}
+
+.whatsapp-float img {
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+}
+
 @media (max-width: 430px){
     .navbar-brand img{
         width: 70px;
         display: 70px;
     }
-    
-    .cards{
-        grid-template-columns: repeat(auto-fill, 140px);
+
+    .card {
+        width: 90%; 
+        margin: 10px auto;
     }
 
-    .product-card{
-        width:140px;
-    }
-    .product-card img{
+    .card img{
         width: 140px;
-        height: 140px;
+        height: auto;
     }
+}
 
-    
+.main-container{
+    margin-top: 150px;
 }

@@ -10,7 +10,9 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
     crossorigin="anonymous"/>
-    <link rel="Stylesheet" type="text/css" href="./returns.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
+    <link href="./purcheaseOrder.css"/>
 </head>
 <body>
     <!--header-->
@@ -36,17 +38,17 @@
                                 Productos
                             </a>
                             <ul class="dropdown-menu">
-                                <a class="dropdown-item" href="../filterProductPage/filter.html">All</a>
-                                <a class="dropdown-item" href="../filterProductPage/filter.html">Funda</a>
-                                <a class="dropdown-item" href="../filterProductPage/filter.html">Cargadores</a>
-                                <a class="dropdown-item" href="../filterProductPage/filter.html">Protectores de pantalla</a>
+                                <a class="dropdown-item" href="../filterProductPage/index.html">All</a>
+                                <a class="dropdown-item" href="../filterProductPage/index.html">Funda</a>
+                                <a class="dropdown-item" href="../filterProductPage/index.html">Cargadores</a>
+                                <a class="dropdown-item" href="../filterProductPage/index.html">Protectores de pantalla</a>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../contactPage/contact.html">Contacto</a>
+                            <a class="nav-link" href="/contactPage/contact.html">Contacto</a><!--completar con su html (diego)-->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../returnsOrderPage/returns.html">Devoluciones</a>
+                            <a class="nav-link" href="/returnsOrderPage/returns.html">Devoluciones</a><!--completar con su html (cris)-->
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -54,7 +56,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="/userPage/logIn/index.html">
+                                    <a class="dropdown-item" href="/userPage/logIn/index.html"><!--completar con su html (bian)-->
                                         Cuenta
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 
@@ -63,7 +65,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="/favoritePage/favoritos.html">
+                                    <a class="dropdown-item" href="/favoritePage/favorite.html"><!--completar con su html (pablo)-->
                                         Favoritos
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                                             <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
@@ -71,7 +73,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="/buyPage/buyPage.html">
+                                    <a class="dropdown-item" href="/buyPage/buyPage.html"> <!--completar con su html (mati)-->
                                         Carrito
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                                             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
@@ -91,165 +93,174 @@
     </header>
 
     <!--body-->
-    <div class="main-container"> 
-        <div class="row row-cols-1 row-cols-md-4 g-3 justify-content-center">
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard" href="../purcheaseOrder/purcheaseOrder.html">
-                        <img src="../productImage/funda_android.jpg" class="card-img-top img-fluid w-100" alt="">
-                    </a>
-                    <div class="card-body"> 
-                        <a href="../purcheaseOrder/purcheaseOrder.html" class="no-underline"><span class="card-title fs-2">Funda Android</span></a>
-                      <p class="fs-4">12 de Febrero 2016</p>
-                      <span class="text-secondary fs-4">Estado: Iniciado</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard" href="../purcheaseOrder/purcheaseOrder.html">
-                        <img src="../productImage/funda_Iphone.jpg" class="card-img-top img-fluid w-100" alt="">
-                    </a>
-                    <div class="card-body"> 
-                        <a href="../purcheaseOrder/purcheaseOrder.html" class="no-underline"><span class="card-title fs-2">Funda iPhone</span></a>
-                      <p class="fs-4">13 de Marzo 2017</p>
-                      <span class="text-primary fs-4">Estado: En Proceso</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard" href="../purcheaseOrder/purcheaseOrder.html">
-                        <img src="../productImage/funda_transparente.jpg" class="card-img-top img-fluid w-100" alt="">
-                    </a>
-                    <div class="card-body"> 
-                        <a href="../purcheaseOrder/purcheaseOrder.html" class="no-underline"><span class="card-title fs-2">Funda Transparente</span></a>
-                      <p class="fs-4">14 de Abril 2018</p>
-                      <span class="text-danger fs-4">Estado: Rechazado</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard" href="../purcheaseOrder/purcheaseOrder.html">
-                        <img src="../productImage/funda_android.jpg" class="card-img-top img-fluid w-100" alt="">
-                    </a>
-                    <div class="card-body"> 
-                        <a href="../purcheaseOrder/purcheaseOrder.html" class="no-underline"><span class="card-title fs-2">Funda Android</span></a>
-                      <p class="fs-4">15 de Mayo 2019</p>
-                      <span class="text-success fs-4">Estado: Resuelto</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard p-2" href="../purcheaseOrder/purcheaseOrder.html">
-                        <div class="row no-gutters">
-                            <div class="col p-0">
-                                <img src="../productImage/funda_Iphone.jpg" class="img-fluid micho" alt="">
-                            </div>
-                            <div class="col p-0">
-                                <img src="../productImage/funda_Iphone.jpg" class="img-fluid micho" alt="">
-                            </div>
-                        </div>
-                        <div class="row no-gutters">
-                            <div class="col p-0">
-                                <img src="../productImage/funda_Iphone.jpg" class="img-fluid micho" alt="">
-                            </div>
-                            <div class="col p-0">
-                                <img src="../productImage/funda_Iphone.jpg" class="img-fluid micho" alt="">
-                            </div>
-                        </div>
-                    </a>
+    <div class="container" style="margin-top: 20px;">
+        <div class="row">
+            <div class="col-xl-8">
+                <div class="card border shadow-none">
                     <div class="card-body">
-                        <a href="../purcheaseOrder/purcheaseOrder.html" class="no-underline"><span class="card-title fs-2">Funda iPhone</span></a>
-                        <p class="fs-4">16 de Junio 2020</p>
-                        <span class="text-success fs-4">Estado: Resuelto</span>
+    
+                        <div class="d-flex align-items-start border-bottom pb-3">
+                            <div class="me-4">
+                                <img src="../productImage/funda_Iphone.jpg" alt="" class="avatar-lg rounded">
+                            </div>
+                            <div class="flex-grow-1 align-self-center overflow-hidden">
+                                <div>
+                                    <h5 class="text-truncate font-size-18"><a href="#" class="text-dark">Funda IPhone </a></h5>
+                                    <p class="mb-0 mt-1">Color : <span class="fw-medium">Gray</span></p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="mt-3">
+                                        <p class="text-muted mb-2">Precio</p>
+                                        <h5 class="mb-0 mt-2"><span class="text-muted me-2"><del class="font-size-16 fw-normal">$500</del></span>$450</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="mt-3">
+                                        <p class="text-muted mb-2">Cantidad</p>
+                                        <h5 class="d-inline-flex">2</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="mt-3">
+                                        <p class="text-muted mb-2">Total</p>
+                                        <h5>$900</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard p-2" href="../purcheaseOrder/purcheaseOrder.html">
-                        <div class="row no-gutters">
-                            <div class="col p-0">
-                                <img src="../productImage/funda_transparente.jpg" class="img-fluid micho" alt="">
+                <!-- end card -->
+    
+                <div class="card border shadow-none">
+                    <div class="card-body">
+    
+                        <div class="d-flex align-items-start border-bottom pb-3">
+                            <div class="me-4">
+                                <img src="../productImage/funda_android.jpg" alt="" class="avatar-lg rounded">
                             </div>
-                            <div class="col p-0">
-                                <img src="../productImage/funda_transparente.jpg" class="img-fluid micho" alt="">
-                            </div>
-                        </div>
-                        <div class="row no-gutters">
-                            <div class="col p-0">
-                                <img src="../productImage/funda_transparente.jpg" class="img-fluid micho" alt="">
-                            </div>
-                            <div class="col p-0">
-                                <img src="../productImage/funda_transparente.jpg" class="img-fluid micho" alt="">
+                            <div class="flex-grow-1 align-self-center overflow-hidden">
+                                <div>
+                                    <h5 class="text-truncate font-size-18"><a href="#" class="text-dark">Funda Android </a></h5>
+                                    <p class="mb-0 mt-1">Color : <span class="fw-medium">Green</span></p>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                    <div class="card-body"> 
-                        <a href="../purcheaseOrder/purcheaseOrder.html" class="no-underline"><span class="card-title fs-2">Funda Transparente</span></a>
-                      <p class="fs-4">17 de Julio 2021</p>
-                      <span class="text-success fs-4">Estado: Resuelto</span>
+    
+                        <div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="mt-3">
+                                        <p class="text-muted mb-2">Precio</p>
+                                        <h5 class="mb-0 mt-2"><span class="text-muted me-2"><del class="font-size-16 fw-normal">$280</del></span>$240</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="mt-3">
+                                        <p class="text-muted mb-2">Cantidad</p>
+                                        <h5 class="d-inline-flex">3</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="mt-3">
+                                        <p class="text-muted mb-2">Total</p>
+                                        <h5>$720</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard p-2" href="../purcheaseOrder/purcheaseOrder.html">
-                        <div class="row no-gutters">
-                            <div class="col p-0">
-                                <img src="../productImage/funda_android.jpg" class="img-fluid micho" alt="">
+                <!-- end card -->
+    
+                <div class="card border shadow-none">
+                    <div class="card-body">
+    
+                        <div class="d-flex align-items-start border-bottom pb-3">
+                            <div class="me-4">
+                                <img src="../productImage/funda_transparente.jpg" alt="" class="avatar-lg rounded">
                             </div>
-                            <div class="col p-0">
-                                <img src="../productImage/funda_android.jpg" class="img-fluid micho" alt="">
-                            </div>
-                        </div>
-                        <div class="row no-gutters">
-                            <div class="col p-0">
-                                <img src="../productImage/funda_android.jpg" class="img-fluid micho" alt="">
-                            </div>
-                            <div class="col p-0">
-                                <img src="../productImage/funda_android.jpg" class="img-fluid micho" alt="">
+                            <div class="flex-grow-1 align-self-center overflow-hidden">
+                                <div>
+                                    <h5 class="text-truncate font-size-18"><a href="#" class="text-dark">Funda Transparente </a></h5>
+                                    <p class="mb-0 mt-1">Color : <span class="fw-medium">Blue</span></p>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                    <div class="card-body"> 
-                        <a href="../purcheaseOrder/purcheaseOrder.html" class="no-underline"><span class="card-title fs-2">Funda Android</span></a>
-                      <p class="fs-4">18 de Agosto 2022</p>
-                      <span class="text-success fs-4">Estado: Resuelto</span>
+    
+                        <div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="mt-3">
+                                        <p class="text-muted mb-2">Precio</p>
+                                        <h5 class="mb-0 mt-2"><span class="text-muted me-2"><del class="font-size-16 fw-normal">$750</del></span>$950</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="mt-3">
+                                        <p class="text-muted mb-2">Cantidad</p>
+                                        <h5 class="d-inline-flex">1</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="mt-3">
+                                        <p class="text-muted mb-2">Total</p>
+                                        <h5>$950</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
                     </div>
                 </div>
+                <!-- end card -->
+    
+                <div class="row my-4">
+                    <div class="col-sm-12">
+                        <!-- todo enviar a historial de compras-->
+                        <a href="../mainPage/index.html" class="btn btn-link text-muted">
+                            <i class="mdi mdi-arrow-left me-1"></i> Volver a Historial de Compra </a>
+                    </div> <!-- end col -->
+                </div> <!-- end row-->
             </div>
-            <div class="col">
-                <div class="card">
-                    <a class="imageCard p-2" href="../purcheaseOrder/purcheaseOrder.html">
-                        <div class="row no-gutters">
-                            <div class="col p-0">
-                                <img src="../productImage/funda_Iphone.jpg" class="img-fluid micho" alt="">
-                            </div>
-                            <div class="col p-0">
-                                <img src="../productImage/funda_Iphone.jpg" class="img-fluid micho" alt="">
-                            </div>
+    
+            <div class="col-xl-4">
+                <div class="mt-5 mt-lg-0">
+                    <div class="card border shadow-none">
+                        <div class="card-header bg-transparent border-bottom py-3 px-4">
+                            <h5 class="font-size-16 mb-0">Resumen de Compra <span class="float-end">#MN0124</span></h5>
                         </div>
-                        <div class="row no-gutters">
-                            <div class="col p-0">
-                                <img src="../productImage/funda_Iphone.jpg" class="img-fluid micho" alt="">
+                        <div class="card-body p-4 pt-2">
+    
+                            <div class="table-responsive">
+                                <table class="table mb-0">
+                                    <tbody>
+                                        <tr class="bg-light">
+                                            <th>Total :</th>
+                                            <td class="text-end">
+                                                <span class="fw-bold">
+                                                    $ 745.2
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="col p-0">
-                                <img src="../productImage/funda_Iphone.jpg" class="img-fluid micho" alt="">
-                            </div>
+                            <!-- end table-responsive -->
                         </div>
-                    </a>
-                    <div class="card-body"> 
-                        <a href="../purcheaseOrder/purcheaseOrder.html" class="no-underline"><span class="card-title fs-2">Funda iPhone</span></a>
-                      <p class="fs-4">19 de Septiembre 2023</p>
-                      <span class="text-success fs-4">Estado: Resuelto</span>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- end row -->
+        
     </div>
     
     <footer>
@@ -307,7 +318,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="./returns.js"></script>
 
 </body>
 </html>
