@@ -1,0 +1,32 @@
+{
+    "usuarios": [
+        {
+            "nombre": "",
+            "apellido": "",
+            "direccion": "",
+            "edad": "",
+            "sexo": "",
+            "carrito": [],
+            "favoritos": []
+        },
+        {
+            "nombre": "",
+            "apellido": "",
+            "direccion": "",
+            "edad": "",
+            "sexo": "",
+            "carrito": [],
+            "favoritos": []
+        },
+        {
+            "nombre": "",
+            "apellido": "",
+            "direccion": "",
+            "edad": "",
+            "sexo": "",
+            "carrito": [],
+            "favoritos": []
+        }
+    ]
+}
+  
