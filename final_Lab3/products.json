@@ -1,0 +1,148 @@
+{
+    "products": [
+        {
+            "title": "Funda Android",
+            "description": "Descripción 1",
+            "precio": "$1000",
+            "image": "../productImage/funda_android.jpg",
+            "color": ["rojo", "verde", "azul"],
+            "favoritos": false
+        },
+        {
+            "title": "Funda iPhone",
+            "description": "Descripción 2",
+            "precio": "$2000",
+            "image": "../productImage/funda_Iphone.jpg",
+            "color": ["negro", "amarillo"],
+            "favoritos": false
+        },
+        {
+            "title": "Funda clear",
+            "description": "Descripción 3",
+            "precio": "$3000",
+            "image": "../productImage/funda_clear.jpg",
+            "color": [],
+            "favoritos": false
+        },
+        {
+            "title": "Funda Android",
+            "description": "Descripción 4",
+            "precio": "$1000",
+            "image": "../productImage/funda_android.jpg",
+            "color": ["rojo", "verde", "azul"],
+            "favoritos": false
+        },
+        {
+            "title": "Funda iPhone",
+            "description": "Descripción 5",
+            "precio": "$2000",
+            "image": "../productImage/funda_Iphone.jpg",
+            "color": ["negro", "amarillo"],
+            "favoritos": false
+        },
+        {
+            "title": "Funda clear",
+            "description": "Descripción 6",
+            "precio": "$3000",
+            "image": "../productImage/funda_clear.jpg",
+            "color": [],
+            "favoritos": false
+        },
+        {
+            "title": "Funda Android",
+            "description": "Descripción 7",
+            "precio": "$1000",
+            "image": "../productImage/funda_android.jpg",
+            "color": ["rojo", "verde", "azul"],
+            "favoritos": false
+        },
+        {
+            "title": "Funda iPhone",
+            "description": "Descripción 8",
+            "precio": "$2000",
+            "image": "../productImage/funda_Iphone.jpg",
+            "color": ["negro", "amarillo"],
+            "favoritos": false
+        },
+        {
+            "title": "Funda clear",
+            "description": "Descripción 9",
+            "precio": "$3000",
+            "image": "../productImage/funda_clear.jpg",
+            "color": [],
+            "favoritos": false
+        },
+        {
+            "title": "Funda Android",
+            "description": "Descripción 1",
+            "precio": "$1000",
+            "image": "../productImage/funda_android.jpg",
+            "color": ["rojo", "verde", "azul"],
+            "favoritos": false
+        },
+        {
+            "title": "Funda iPhone",
+            "description": "Descripción 2",
+            "precio": "$2000",
+            "image": "../productImage/funda_Iphone.jpg",
+            "color": ["negro", "amarillo"],
+            "favoritos": false
+        },
+        {
+            "title": "Funda clear",
+            "description": "Descripción 3",
+            "precio": "$3000",
+            "image": "../productImage/funda_clear.jpg",
+            "color": [],
+            "favoritos": false
+        },
+        {
+            "title": "Funda Android",
+            "description": "Descripción 1",
+            "precio": "$1000",
+            "image": "../productImage/funda_android.jpg",
+            "color": ["rojo", "verde", "azul"],
+            "favoritos": false
+        },
+        {
+            "title": "Funda iPhone",
+            "description": "Descripción 2",
+            "precio": "$2000",
+            "image": "../productImage/funda_Iphone.jpg",
+            "color": ["negro", "amarillo"],
+            "favoritos": false
+        },
+        {
+            "title": "Funda clear",
+            "description": "Descripción 3",
+            "precio": "$3000",
+            "image": "../productImage/funda_clear.jpg",
+            "color": [],
+            "favoritos": false
+        },
+        {
+            "title": "Funda Android",
+            "description": "Descripción 1",
+            "precio": "$1000",
+            "image": "../productImage/funda_android.jpg",
+            "color": ["rojo", "verde", "azul"],
+            "favoritos": false
+        },
+        {
+            "title": "Funda iPhone",
+            "description": "Descripción 2",
+            "precio": "$2000",
+            "image": "../productImage/funda_Iphone.jpg",
+            "color": ["negro", "amarillo"],
+            "favoritos": false
+        },
+        {
+            "title": "Funda clear",
+            "description": "Descripción 3",
+            "precio": "$3000",
+            "image": "../productImage/funda_clear.jpg",
+            "color": [],
+            "favoritos": false
+        }
+    ]
+}
