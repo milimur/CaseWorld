@@ -22,15 +22,15 @@ function createCards(products) {
         card.classList.add('col-md-4', 'mb-4'); 
 
         card.innerHTML = `
-            <div class="card">
-                <a class="imageCard" href="../productPage/compraProducto.html">
+             <div class="card">
+                <a class="imageCard" href="../productPage/compraProducto.html?id=${product.id}">
                     <img src="${product.image}" class="card-img-top img-fluid w-100" alt="">
                 </a>
                 <div class="card-body">
                     <a href="#" class="no-underline"><h5 class="card-title">${product.title}</h5></a>
                     <p class="card-text">${product.description}</p>
                     <h4 class="price">${product.precio}</h4>
-                    <a href="../productPage/compraProducto.html" class="btn btn-primary">Ver</a>
+                    <a href="../productPage/compraProducto.html?id=${product.id}" class="btn btn-primary">Ver</a>
                 </div>
             </div>
         `;
@@ -42,6 +42,36 @@ function createCards(products) {
 document.addEventListener("DOMContentLoaded", function() {
     fetchProducts();
 });
+
+// Función para obtener el ID del producto seleccionado
+function obtenerIdProductoSeleccionado() {
+    const url = new URL(window.location.href);
+    const idProducto = url.searchParams.get('id');
+    return idProducto;
+  }
+  
+  // Evento click para el botón de selección de producto
+  const botonesSeleccionProducto = document.querySelectorAll('.btn-seleccionar-producto');
+  
+  botonesSeleccionProducto.forEach(boton => {
+    boton.addEventListener('click', () => {
+      const idProducto = boton.dataset.idProducto;
+      const urlProducto = `product.html?id=${idProducto}`;
+      window.location.href = urlProducto;
+    });
+  });
+
+// Función para redirigir a la página de detalle del producto
+function verDetalles(index) {
+    // Guardar el índice del producto seleccionado en sessionStorage
+    sessionStorage.setItem('productoSeleccionado', index);
+    // Redireccionar a la página de detalle del producto
+    window.location.href = 'productPage/product.html';
+}
+
+function viewProduct(productId) {
+    window.location.href = `../productPage/index.html?id=${productId}`;
+}
 
 //filtrado marca
 function changeCardBrand(marca) {

@@ -82,7 +82,7 @@
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit" href="/productPage/filter.html">Search</button>
+                        <button class="btn btn-outline-light" type="submit" href="/filterProductPage/filter.html">Search</button>
                     </form>
                 </div>
             </div>
@@ -250,6 +250,13 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function redirectToFilterPage() {
+        //Redirigir a la página filter.html que está en otra carpeta
+            window.location.href = '/filterProductPage/filter.html';
+        }
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

@@ -1,3 +1,4 @@
+
 //codigo que es para la parte de seleccionar el modelo de celular
 const models = {
     iPhone: [
@@ -83,9 +84,60 @@ document.getElementById('brandButton').addEventListener('click', () => {
 //hasta aca codigo que es para seleccionar el modelo de celular
 
 
-//cantidad
 
+// cargamos la informacion del producto en los campos correspondientes
+function cargarDatosProducto() {
+    let idProducto = GetURLParameter('id') - 1;
+
+    //titulo
+    const tituloProducto = document.getElementById('titulo');
+    tituloProducto.innerHTML = productos[idProducto].title;
+
+    //precio
+    const precioProducto = document.getElementById('product-price');
+    precioProducto.innerHTML = productos[idProducto].precio;
+
+    //descripcion
+    const descripcionProducto = document.getElementById('descripcionProducto');
+    descripcionProducto.innerHTML = productos[idProducto].description;
+
+    //imagen
+    const imagenProducto = document.getElementById('product-image');
+    imagenProducto.src = productos[idProducto].image;
+    imagenProducto.classList.remove("opacity-0");
+    document.getElementById('magnifier').classList.remove("opacity-0");
+}
+
+// variable que se utiliza para almacenar los productos
+let productos;
+
+
+// funcion para leer parametros get de la url
+function GetURLParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}
+
+
+//cantidad
 document.addEventListener('DOMContentLoaded', () => {
+    // al cargar el dom, traemos todos los productos desde nuestro json
+    fetch('../products.json')
+    .then((response) => response.json())
+    .then((json) => {
+        productos = json.products;
+        cargarDatosProducto();
+    });
+
     const campoCantidad = document.getElementById('cantidad');
     const incrementButton = document.getElementById('incrementButton');
     const decrementButton = document.getElementById('decrementButton');
@@ -152,4 +204,3 @@ heartButton.addEventListener("click", () => {
 cartButton.addEventListener("click", () => {
     cartButton.classList.toggle("active");
 });
-

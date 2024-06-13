@@ -82,6 +82,7 @@ header{
     width: 350px;
     height: 460px;
     border-radius: 10px;
+    object-fit: cover;
     clear: both;
     float: left;
     /* margin: 0px 50px 50px 50px; */
@@ -101,7 +102,6 @@ header{
     clear: both;
     float: center;
     margin-top: 0;
-    margin-bottom: 50px;
     font-weight: bold;
     font-family: 'Arial', sans-serif;
 }
@@ -209,9 +209,14 @@ header{
     color: white; 
 }
 
-.button.active i {
-    color: red; 
+#heartButton.active i {
+    color: red;
 }
+
+#cartButton.active i {
+    color: rgb(0, 0, 0);
+}
+
 /*hasta aca botones de carrito y favs*/
 
 .content .precio{
@@ -261,6 +266,26 @@ header{
     background-repeat: no-repeat;
 }
 /* hasta aca la lupa que agranda la imagen*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*responsive*/
@@ -336,7 +361,7 @@ header{
     }
     
     .contenido {
-        margin-top: 15px; /* Ajusta el margen superior para evitar que el contenido se superponga con el encabezado */
+        margin-top: 15px; 
         padding: 5px;
         background-color: #f2f2f2;
     }
@@ -538,4 +563,6 @@ header{
     
 }
 
-         
+
+
+            

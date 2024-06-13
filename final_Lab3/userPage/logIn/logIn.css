@@ -4,8 +4,6 @@ body{
     box-sizing: border-box;
     
 }
-
-
 .header{
     position: fixed;
     width: 100%;
@@ -17,6 +15,20 @@ body{
     width: 100px;
 }
 
+.container{
+    padding: 0px;
+    margin: 0px;
+    z-index: 0;
+    background: white;
+    place-content: center;
+    border: 0;
+    overflow: hidden;
+}
+
+.iframe {
+    height: 100%;
+    padding: 10px;
+}
 .footer{
     position: fixed;
     width: 100%;

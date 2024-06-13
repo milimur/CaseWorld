@@ -19,7 +19,6 @@ let products = [
 
 
 // Filtrar productos favoritos
-
 const generarHtmlProducto = (product) => `
     <div class="card mb-3" style="max-width: 100%; width: 100%; position: relative;">
         <div class="row g-0">
@@ -34,7 +33,7 @@ const generarHtmlProducto = (product) => `
                 </div>
             </div>
             <div class="col-md-2 d-flex align-items-end justify-content-end">
-                <a href="#" class="btn btn-primary align-self" style="margin-bottom: 8px; margin-right: 8px;">Comprar</a>
+                <a href="/buypage/buyPage.html" class="btn btn-primary align-self" style="margin-bottom: 8px; margin-right: 8px;">Comprar</a>
                 <button class="btn-star btn btn-link position-absolute top-0 end-0 mt-2 me-3" style="z-index: 1;" onclick="cambioEstadoFavorito('${product.id}')">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                         <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>

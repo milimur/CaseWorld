@@ -1,6 +1,7 @@
 {
     "products": [
         {
+            "id": 1,
             "title": "Funda Android",
             "description": "Descripción 1",
             "precio": "$1000",
@@ -9,6 +10,7 @@
             "favoritos": false
         },
         {
+            "id": 2,
             "title": "Funda iPhone",
             "description": "Descripción 2",
             "precio": "$2000",
@@ -17,6 +19,7 @@
             "favoritos": false
         },
         {
+            "id": 3,
             "title": "Funda clear",
             "description": "Descripción 3",
             "precio": "$3000",
@@ -25,6 +28,7 @@
             "favoritos": false
         },
         {
+            "id": 4,
             "title": "Funda Android",
             "description": "Descripción 4",
             "precio": "$1000",
@@ -33,6 +37,7 @@
             "favoritos": false
         },
         {
+            "id": 5,
             "title": "Funda iPhone",
             "description": "Descripción 5",
             "precio": "$2000",
@@ -41,6 +46,7 @@
             "favoritos": false
         },
         {
+            "id": 6,
             "title": "Funda clear",
             "description": "Descripción 6",
             "precio": "$3000",
@@ -49,6 +55,7 @@
             "favoritos": false
         },
         {
+            "id": 7,
             "title": "Funda Android",
             "description": "Descripción 7",
             "precio": "$1000",
@@ -57,6 +64,7 @@
             "favoritos": false
         },
         {
+            "id": 8,
             "title": "Funda iPhone",
             "description": "Descripción 8",
             "precio": "$2000",
@@ -65,6 +73,7 @@
             "favoritos": false
         },
         {
+            "id": 9,
             "title": "Funda clear",
             "description": "Descripción 9",
             "precio": "$3000",
@@ -73,6 +82,7 @@
             "favoritos": false
         },
         {
+            "id": 10,
             "title": "Funda Android",
             "description": "Descripción 1",
             "precio": "$1000",
@@ -80,7 +90,7 @@
             "color": ["rojo", "verde", "azul"],
             "favoritos": false
         },
-        {
+        {"id": 11,
             "title": "Funda iPhone",
             "description": "Descripción 2",
             "precio": "$2000",
@@ -89,6 +99,7 @@
             "favoritos": false
         },
         {
+            "id": 12,
             "title": "Funda clear",
             "description": "Descripción 3",
             "precio": "$3000",
@@ -97,6 +108,7 @@
             "favoritos": false
         },
         {
+            "id": 13,
             "title": "Funda Android",
             "description": "Descripción 1",
             "precio": "$1000",
@@ -105,6 +117,7 @@
             "favoritos": false
         },
         {
+            "id": 14,
             "title": "Funda iPhone",
             "description": "Descripción 2",
             "precio": "$2000",
@@ -113,6 +126,7 @@
             "favoritos": false
         },
         {
+            "id": 15,
             "title": "Funda clear",
             "description": "Descripción 3",
             "precio": "$3000",
@@ -121,6 +135,7 @@
             "favoritos": false
         },
         {
+            "id": 16,
             "title": "Funda Android",
             "description": "Descripción 1",
             "precio": "$1000",
@@ -129,6 +144,7 @@
             "favoritos": false
         },
         {
+            "id": 17,
             "title": "Funda iPhone",
             "description": "Descripción 2",
             "precio": "$2000",
@@ -137,6 +153,7 @@
             "favoritos": false
         },
         {
+            "id": 18,
             "title": "Funda clear",
             "description": "Descripción 3",
             "precio": "$3000",
