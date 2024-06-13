@@ -181,6 +181,8 @@
     </footer>
 
     <script>
+        isRegenerate = false;
+
         function signIn() {
             var email = document.getElementById('email').value;
             var password = document.getElementById('password').value;
@@ -216,11 +218,14 @@
             return true;
         }
 
-        // Evitar envío del formulario por defecto y llamar a la función personalizada signIn
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            signIn();
-        });
+            // Evitar envío del formulario por defecto y llamar a la función personalizada signIn
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                signIn();
+            },
+            
+            isRegenerate = true
+        );
 
         function onSignIn() {
             var oauth2Endpoint = 'https://accounts.google.com/o/oauth2/v2/auth';

@@ -1,5 +1,6 @@
+
 // Definir el booleano
-const mostrarCards = false;
+const mostrarCards = true;
 
 // Función para controlar la visibilidad de las cards
 function controlarVisibilidadCards() {
