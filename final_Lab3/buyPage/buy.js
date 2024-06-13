@@ -55,3 +55,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+        // Agrega tu public key
+        const mp = new MercadoPago('YOUR_PUBLIC_KEY', {
+            locale: 'es-AR'
+        });
+
+        // Manejar la selección del método de pago
+        function showForm(formId) {
+            document.querySelectorAll('.payment-form').forEach(function(form) {
+                form.style.display = 'none';
+            });
+            document.querySelectorAll('.payment-option').forEach(function(option) {
+                option.classList.remove('active');
+            });
+            document.getElementById(formId).style.display = 'block';
+            document.getElementById('option' + formId.split('-')[1]).classList.add('active');
+        }
+
+        // Crear el botón de pago
+        const checkoutButton = mp.checkout({
+            preference: {
+                id: 'YOUR_PREFERENCE_ID' // Reemplaza con el ID de tu preferencia de pago
+            },
+            render: {
+                container: '#form-mercado-pago', // Indica el lugar donde se renderizará el botón
+                label: 'Pagar con Mercado Pago' // Cambia el texto del botón si es necesario
+            }
+        });
+   
