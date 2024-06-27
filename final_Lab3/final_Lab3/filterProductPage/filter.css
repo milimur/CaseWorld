@@ -1,0 +1,126 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    border-style: none;
+}
+
+#encabezado {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#encabezado h1 {
+    margin: 0;
+    padding-left: 20px;
+}
+
+#encabezado nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#encabezado nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+#encabezado nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contenido {
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+#main {
+    margin-top: 200px;
+}
+
+.navbar-brand img {
+    width: 100px;
+}
+
+.color-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px; /* Ajustar para que los botones sean más cuadrados */
+    border: 1px solid #ddd;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.no-underline {
+    text-decoration: none;
+    color: black;
+}
+
+.card {
+    padding: 0;
+}
+
+.card img {
+    height: 250px;
+}
+
+.footer {
+    width: 100%;
+    padding: 0;
+    border-style: none;
+}
+
+.mb-2 svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    margin-right: 20px;
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+}
+
+.whatsapp-float img {
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+@media (max-width: 430px) {
+    .navbar-brand img {
+        width: 70px;
+        display: 70px;
+    }
+
+    .card {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .card img {
+        width: 140px;
+        height: auto;
+    }
+}
