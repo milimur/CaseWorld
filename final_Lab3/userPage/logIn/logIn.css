@@ -42,12 +42,6 @@ body{
     text-decoration: none;
 }
 
-.contenido {
-    margin-top: 70px; /* Ajusta el margen superior para evitar que el contenido se superponga con el encabezado */
-    padding: 20px;
-    background-color: #f2f2f2;
-}
-
 .navbar-brand img{
     width: 100px;
 }
@@ -64,6 +58,20 @@ body{
     overflow: hidden;
 }
 
+.login-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.custom-center {
+    text-align: center;
+}
+
+#btn-iniciar{
+    margin-top: 10px;
+}
 
 .footer{
     position: fixed;
@@ -78,24 +86,4 @@ body{
     height: 20px;
     fill: currentColor;
     margin-right: 20px;
-}
-
-
-@media (max-width: 430px){
-    .carousel{
-        opacity: 0;
-        margin-top: 0;
-    }
-
-    .card {
-        width: 90%; 
-        margin: 10px auto;
-    }
-
-    .card img{
-        width: 140px;
-        height: auto;
-    }
-
-    
 }

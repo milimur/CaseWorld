@@ -30,23 +30,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/mainPage/main.html">Inicio</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" 
-                            aria-expanded="true">
-                                Productos
-                            </a>
-                            <ul class="dropdown-menu">
-                                <a class="dropdown-item" href="/filterProductPage/filter.html">All</a>
-                                <a class="dropdown-item" href="/filterProductPage/filter.html">Funda</a>
-                                <a class="dropdown-item" href="/filterProductPage/filter.html">Cargadores</a>
-                                <a class="dropdown-item" href="/filterProductPage/filter.html">Protectores de pantalla</a>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/filterProductPage/filter.html">Fundas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/contactPage/contact.html">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/returnsOrderPage/returns.html">Devoluciones</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -54,7 +42,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="/userPage/logIn/Index.html">
+                                    <a class="dropdown-item" id="account-link" href="#">
                                         Cuenta
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 
@@ -203,6 +191,20 @@
     </a>
 
     <script>
+        window.onload = function() {
+            const accountLink = document.getElementById('account-link');
+            const cookies = document.cookie.split('; ').reduce((acc, cookie) => {
+                const [name, value] = cookie.split('=');
+                acc[name] = value;
+                return acc;
+            }, {});
+
+            if (cookies.email) {
+                accountLink.href = "/userPage/profile/Index.html";
+            } else {
+                accountLink.href = "/userPage/logIn/Index.html";
+            }
+        };
         function redirectToFilterPage() {
         //Redirigir a la página filter.html que está en otra carpeta
             window.location.href = '/filterProductPage/filter.html';
