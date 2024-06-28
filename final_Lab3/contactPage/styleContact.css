@@ -10,6 +10,26 @@ body{
     position: static;
 }
 
+#carritoo {
+    width: 45px;
+    height: 45px;
+    margin: -20px;
+}
+
+#user {
+    margin: -16px;
+}
+
+#fav {
+    margin: 30px;
+}
+
+#content {
+    margin-top: 0px;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
 .navbar-brand img{
     width: 100px;
 }

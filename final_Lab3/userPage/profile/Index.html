@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Form</title>
     <link rel="stylesheet" href="../profile/Style.css">
+    <script src="./profile.js"></script>
     <script src="https://kit.fontawesome.com/a2dd6045c4.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="Styles.css">
@@ -13,215 +14,112 @@
 </head>
 <body>
     <!--header-->
-    <header> 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <header id="encabezado">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-
-                <a class="navbar-brand" href="/mainPage/main.html">
-                    <img src="/icons_CaseWorld/caseWorld.png"alt=""/>
+                <a class="navbar-brand" href="./mainPage/main.html">
+                    <img src="/icons_CaseWorld/caseWorld.png">
                 </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-                aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="/mainPage/main.html">Inicio</a>
+                            <a class="nav-link" href="./main.html">Inicio</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" 
-                            aria-expanded="true">
-                                Productos
-                            </a>
-                            <ul class="dropdown-menu">
-                                <a class="dropdown-item" href="/filterProductPage/filter.html">All</a>
-                                <a class="dropdown-item" href="/filterProductPage/filter.html">Funda</a>
-                                <a class="dropdown-item" href="/filterProductPage/filter.html">Cargadores</a>
-                                <a class="dropdown-item" href="/filterProductPage/filter.html">Protectores de pantalla</a>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/filterProductPage/filter.html">Fundas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/contactPage/contact.html">Contacto</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/returnsOrderPage/returns.html">Devoluciones</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Usuario
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="/userPage/logIn/Index.html">
-                                        Cuenta
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 
-                                            8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="/favoritePage/favoritos.html">
-                                        Favoritos
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="/buyPage/buyPage.html">
-                                        Carrito
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit" href="/filterProductPage/filter.html">Search</button>
-                    </form>
+                    <span class="navbar-text d-flex align-items-center">
+                        <ul class="nav justify-content-end align-items-center">
+                            <li class="nav-item">
+                                <a href="/userPage/profile/Index.html" id="account-link" class="nav-link text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="user" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/favoritePage/favoritos.html" class="nav-link text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="fav" width="25" height="25" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/buyPage/buyPage.html" id="cart" class="nav-link text-white">
+                                    <img src="/icons_CaseWorld/carrito.png" alt="Carrito de compras" id="carritoo" >
+                                    <span id="cuenta-carrito" class="badge bg-danger">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </span>                    
                 </div>
             </div>
         </nav>
     </header>
 
     <!--body-->
-    <div class="UserProfile" float=left>   
-            <div class="all" method="post" float=left> 
-                <div class="subencabezado" text-align=center data-bs-theme="dark">
-                <h1>    Bienvenido a Case World!  <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentColor"><path d="M880-759q0-51-35-86t-86-35v-60q75 0 128 53t53 128h-60ZM240-40q-83 0-141.5-58.5T40-240h60q0 58 41 99t99 41v60Zm162 0q-30 0-56-13.5T303-92L48-465l24-23q19-19 45-22t47 12l116 81v-383q0-17 11.5-28.5T320-840q17 0 28.5 11.5T360-800v537L212-367l157 229q5 8 14 13t19 5h278q33 0 56.5-23.5T760-200v-560q0-17 11.5-28.5T800-800q17 0 28.5 11.5T840-760v560q0 66-47 113T680-40H402Zm38-440v-400q0-17 11.5-28.5T480-920q17 0 28.5 11.5T520-880v400h-80Zm160 0v-360q0-17 11.5-28.5T640-880q17 0 28.5 11.5T680-840v360h-80ZM486-300Z"/></svg> <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentColor"><path d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v720q0 33-23.5 56.5T680-40H280Zm0-200v120h400v-120H280Zm200 100q17 0 28.5-11.5T520-180q0-17-11.5-28.5T480-220q-17 0-28.5 11.5T440-180q0 17 11.5 28.5T480-140ZM280-320h400v-400H280v400Zm0-480h400v-40H280v40Zm0 560v120-120Zm0-560v-40 40Z"/></svg>  </h1>
-            </div>
-                <h4>       ___________________________________________________    </h4>
-                <h4>Te informamos acerca de tu: </h4>
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                            </svg>
-                            <h3>  Historial de Compras</h3>
-                        </button>
-                      </h2>
-                      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="listaCompras">
-                                Aqui tienes un registro de las compras de tus productos.
-                                <ul class="list-group list-group-flush">
-                                    <strong></strong><h5>Compra 1</h4></strong>
-                                    <li class="list-group-item">Producto 1 </li>
-                                    <li class="list-group-item">Producto 2</li>
-                                    <li class="list-group-item">Producto 3</li>
-                             </ul>
-
-                             <ul class="list-group list-group-flush">
-                                <strong><h5>Compra 2</h5></strong>
-                                    <li class="list-group-item">Producto 1 </li>
-                                    <li class="list-group-item">Producto 2</li>
-                                    <li class="list-group-item">Producto 3</li>
-                              </ul>
-
-                             <ul class="list-group list-group-flush">
-                                <strong> <h5>Compra 3</h5></strong>
-                                    <li class="list-group-item">Producto 1 </li>
-                                    <li class="list-group-item">Producto 2</li>
-                                    <li class="list-group-item">Producto 3</li>
-                             </ul>
-                                <h1>. <span class="badge text-bg-secondary"> TOTAL=$$$</span></h1>
+    <div class="main-body">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <img src="perfilusuario.jpeg" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+                            <div class="mt-3">
+                                <button class="btn btn-outline-primary" onclick="logOut()">Log Out</button>
                             </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentColor"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"/></svg>
-                            <h3>  Puntos Adquiridos</h3>
-                        </button>
-                      </h2>
-                      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample" >
-                           <div text-align=center>
-                                    Puedes cajear tus puntos cuando lo desees en el momento de tu compra.
-                                    <h1>      </h1>
-                                     <button type="button" class="btn btn-secondary btn-lg">Canjear Puntos</button>
-                            </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="currentColor"><path d="M440-280h80v-40h40q17 0 28.5-11.5T600-360v-120q0-17-11.5-28.5T560-520H440v-40h160v-80h-80v-40h-80v40h-40q-17 0-28.5 11.5T360-600v120q0 17 11.5 28.5T400-440h120v40H360v80h80v40ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-480H160v480Zm0 0v-480 480Z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="currentColor"><path d="M880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720Zm-720 80h640v-80H160v80Zm0 160v240h640v-240H160Zm0 240v-480 480Z"/></svg>
-                            <h3>  Datos de Pago</h3>
-                        </button>
-                      </h2>
-                      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            
-                            <div class="card">
-                                <div class="card-header">
-                                  Datos de tarjeta
-                                </div>
-                                <div class="card-body">
-                                  <blockquote class="datostarj">
-                                    <p>
-                                        Emisor: MasterCard, Visa o American Express./
-                                        Nº de tarjeta: *************/
-                                        Fecha de caducidad: DD/MM/AÑO /
-                                        Titular: USUARIO.
-                                    </p>
-                                    <footer class="blockquote-footer">Puede realizar cambios de los datos al editar su perfil. <cite title="Source Title"></cite></footer>
-                                  </blockquote>
-                                </div>
-                              </div>
                         </div>
-                      </div>
                     </div>
-                  </div>  
-                  
-                  
-
-            </div>   
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">DNI</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" class="form-control" id="dni" placeholder="" disabled>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Email</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" id="email" class="form-control" placeholder="" disabled>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Mobile</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" id="mobile" class="form-control" placeholder="" disabled>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Password</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="password" id="password" class="form-control" placeholder="******" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
             
-
-              <aside data-bs-theme="dark">
-                <div class="card" style="width: 20rem;" data-bs-theme="dark">
-                   <div class="imgp">
-                        <img src=perfilusuario.jpeg class="photoProfile"  height="300" width="315" align-items=center border-radius=50% margin=30% display=block>
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">USUARIO: (DNI)</h5>
-                      <p class="card-text">Activo hace 2 min</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>
-                        2614355611
-                      </li>
-                      <li class="list-group-item">
-                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg>
-                        User001@gmail.com
-                      </li>
-                      <li class="list-group-item">
-                        <h6>La informacion añadida es confidencial </h6>
-                      </li>
-                    </ul>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Editar Perfil</a>
-                      <button type="button" class="btn btn-secondary">cerrar Sesion</button>
-                    </div>
-                  </div>
-                   
-             </aside>
-    </div>
-    <div>
-        <h1>Gracias por elegirnos!  <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentColor"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"/></svg></h1>
-    </div>
-
     <footer>
         <div class="container-fluid">
             <div class="row p-5 bg-dark text-white">
@@ -235,7 +133,6 @@
                             <a class="dropdown-item" href="/mainPage/main.html">Inicio</a>
                             <a class="dropdown-item" href="/filterProductPage/filter.html">Productos</a>
                             <a class="dropdown-item" href="/contactPage/contact.html">Contactos</a>
-                            <a class="dropdown-item" href="/returnsOrderPage/returns.html">Devoluciones</a>
                             <a class="dropdown-item" href="/mainPage/main.html">Usuario</a>
                         </div>
                     </ul>
@@ -277,9 +174,9 @@
     </footer>
 
     <script>
-        function redirectToFilterPage() {
-        //Redirigir a la página filter.html que está en otra carpeta
-            window.location.href = '/filterProductPage/filter.html';
+        function logOut(){
+            document.cookie = `email=; max-age=0; path=/`;
+            window.location.href ="/userPage/logIn/index.html"
         }
     </script>
 

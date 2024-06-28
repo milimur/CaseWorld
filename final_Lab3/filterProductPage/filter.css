@@ -7,11 +7,22 @@ body {
     width: 100%;
     border-style: none;
 }
+#carritoo {
+    width: 45px;
+    height: 45px;
+    margin: -20px;
+}
+
+#user {
+    margin: -16px;
+}
+
+#fav {
+    margin: 30px;
+}
 
 #encabezado {
-    background-color: #333;
     color: #fff;
-    padding: 10px 0;
     position: fixed;
     width: 100%;
     top: 0;
